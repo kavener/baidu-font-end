@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <!--网页重定向，用于页面自动跳转，比如可能是因为域名更改了等自动跳转到新域名  参数20代表等待跳转秒数-->
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> -->
+    <meta http-equiv="Refresh" content="20;url=http://www.w3school.com.cn" />
+</head>
 <!--HTML框架-->
-<frameset rows="50%, 50%">
+<!-- <frameset rows="50%, 50%">
     <frame src='First.html' noresize="noresize">
         <frameset cols="50%, 50%">
             <frame src="second.html">
             <frame src='third.html'>
         </frameset>
-</frameset>
+</frameset> -->
 <!--iframe 用于网页内部显示网页-->
+<!--及简单背景设置-->
+<!-- <body bgcolor="#000000"> -->
+<!-- <body bgcolor="rgb(0,0,0)"> -->
+<!-- <body bgcolor="black"> -->
+
 <body>
-    <iframe src="http://www.baidu.com/"></iframe>
+    <h1 style="background-color: grey">二十秒后将会跳转......</h1>
+    <iframe src="http://www.baidu.com/" wdith="1500" height="600" frameborder="0"></iframe>
+
+    <!--HTML脚本初探 可以使用注释应对老旧浏览器可能识别不了脚本代码导致直接打印代码的问题，而新的浏览器依然可以直接从注释中识别脚本代码并运行-->
+    <script type="text/javascript">
+    < !--
+            document.write("被注释依然能够被运行的js代码")
+    //-->
+    </script>
+    <!--&nbsp; 空格的字符实体-->
+    <a href="http://www.w3school.com.cn/html/html_entities.asp">HTML字符实体</a>
+    <P>真正的空格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;字符实体</P>
 </body>
 
 </html>
