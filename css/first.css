@@ -1,0 +1,29 @@
+/*推荐使用外链样式表进行修改管理样式*/
+h1 {
+    color: blue;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+p {
+    color: red;
+}
+
+p, li {
+    text-decoration: underline;
+}
+div {
+    background-color: rosybrown;
+}
+.my{
+    color: coral;
+}
+.div_class {
+    text-decoration: line-through;
+}
+#rude {
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+/*通用选择器 * 选择所有元素，一般配合使用为佳 更多情况下不会使用*/
