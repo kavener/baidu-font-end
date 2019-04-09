@@ -1,0 +1,20 @@
+/*应用于所有具有one-protery属性的元素*/
+body {
+    background-color: darkgray;
+}
+
+[one-protery] {
+    color: red;
+}
+/*应用于该属性值=yes的元素*/
+[one-protery=yes_you] {
+    color:green;
+}
+/*运用所有该属性的包含值see的元素，即使该属性有多个值*/
+[one-protery~=see] {
+    color: burlywood;
+}
+/* 选择属性为one-protery且包含属性值yes开头的所有元素，当然也包括yes */
+[one-protery^="yes"] {
+    color: deeppink;
+}

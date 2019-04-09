@@ -1,0 +1,26 @@
+body {
+    background-color: lightslategray;
+}
+
+a {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 使得颜色像点击以前一样 */
+a:visited {
+    color: blue;
+}
+
+/* 当鼠标悬浮在链接上时链接样式： */
+a:hover,
+a:active,
+a:focus {
+    color: darkred;
+    text-decoration: none;
+}
+
+/* 伪元素 */
+[href^="http"]::after {
+    content:'这是一个链接';
+}
