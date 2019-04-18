@@ -1,6 +1,6 @@
 // 一些汇总总结，迫在眉睫的需求，比如英文文档阅读能力（Dart文档，Flutter文档，外国社区等必须的能力要求，甚至文档翻译能力）
 // Dart、Flutter 中需多的类思想，函数式编程等思想
-// 不断思考，理解，
+// 不断实践，思考，理解其本质，即尝试源码的阅读，尤其是Dart和Flutter的源码极其优秀，再加之注释的完美搭配
 
 // 导入Material UI组件库
 import 'package:flutter/material.dart';
@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -215,10 +214,9 @@ class _CounterWidgetState extends State<CounterWidget> {
 }
 
 class TapboxA extends StatefulWidget {
-  TapboxA({Key key}) : super(key:key);
+  TapboxA({Key key}) : super(key: key);
   @override
-  _TapboxAState createState() =>  new _TapboxAState();
-
+  _TapboxAState createState() => new _TapboxAState();
 }
 
 class _TapboxAState extends State<TapboxA> {
@@ -226,22 +224,18 @@ class _TapboxAState extends State<TapboxA> {
 
   void _handleTap() {
     setState(() {
-     _active = !_active; 
+      _active = !_active;
     });
   }
 
   Widget build(BuildContext context) {
     return new GestureDetector(
-      onTap: _handleTap,
-      child: new Container(
-        child: new Center(
-          child: new Text(
-            _active ? 'Active' : 'Inactive',
-            style: new TextStyle(fontSize: 32.0, color: Colors.white),
-            )
-          )
-        )
-      );
-     
+        onTap: _handleTap,
+        child: new Container(
+            child: new Center(
+                child: new Text(
+          _active ? 'Active' : 'Inactive',
+          style: new TextStyle(fontSize: 32.0, color: Colors.white),
+        ))));
   }
 }
