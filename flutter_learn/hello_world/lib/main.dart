@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
       // 使用命名路由管理route，首先注册路由表
       routes: {
         "new_page": (context) => NewRoute(),
-        "counter_page": (context) => CounterWidget(),
+        // 使用新路由来学习新知识
+        "text_page": (context) => NewText(),
       },
       // 应用首页路由
       home: new MyHomePage(title: 'Flutter Demo Home Page'),
@@ -93,6 +94,12 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.blue,
               onPressed: () => Navigator.pushNamed(context, "new_page"),
             ),
+            // 添加文本及样式路由按钮
+            FlatButton(
+              child: Text('文本及样式'),
+              textColor: Colors.blue,
+              onPressed: () => Navigator.pushNamed(context, "text_page"),
+            ),
             new RandomWordsWidget(),
             Echo(
               text: "hello, world",
@@ -114,8 +121,30 @@ class NewRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: AppBar(title: Text('This is new route.')),
+        appBar: AppBar(title: Text('new Route')),
         body: Center(child: Text('nice route.')));
+  }
+}
+
+class NewText extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var scaffold = new Scaffold(
+      appBar: 
+      AppBar(title: Text('文本及样式'),
+      ),
+      body: new Center(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("Hello world.",
+            textAlign: TextAlign.right,
+            )
+          ],
+        )),
+        );
+    return scaffold;
+      
   }
 }
 
@@ -239,3 +268,5 @@ class _TapboxAState extends State<TapboxA> {
         ))));
   }
 }
+
+ 
