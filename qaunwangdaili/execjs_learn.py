@@ -61,9 +61,11 @@ ctx = execjs.compile(js_ex)
 port = ctx.call('get_port', 'HZZZC')
 print(port)
 
-
+# 一行以蔽之
 def get_port(port_s):
+    # 通过列表推倒，字符串拼接，字符索引，整型与字符的相互转换，字符索引的生成，整形的位计算等完成js功能
     return str(int(''.join([str('ABCDEFGHIZ'.index(port_s[i])) for i in range(len(port_s))])) >> 3)
+ 
 
 
 def get_page(url, headers):
@@ -203,7 +205,3 @@ def put_ip(ip, test_url):
 put_ip('211.24.102.168:80', 'www.baidu.com')
 
 ### 更新设计目标：   针对单网站的数据采集-代理IP池构建
-
-
-
-
